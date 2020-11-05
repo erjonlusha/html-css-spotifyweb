@@ -3,6 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+    color:white
+}
+.bnt_upgrade{text-align: end;}
+.bnt_upgrade>span {
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 15px 30px 15px 30px;
+    line-height: 4em;
+}
 
 /* Utility classes */
 .d-flex {display: flex;}
@@ -17,7 +28,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-#recently_played, #created_for {justify-content: space-around;}
+.text_uppercase{text-transform: uppercase;}
+#recently_played, #created_for, #popular {justify-content: space-around;}
 
 #site_content{height: calc(100% - 60px);}
 aside.main_menu {
@@ -36,10 +48,10 @@ aside.main_menu {
     position: fixed;
     top: 0;
     right: 0;
-    width: calc(100% - 322px);
+    width: calc(100% - 320px);
     height: 60px;
-    background-color: #8a2be2a1;
-    margin-right: 22px;
+    background-color: #0e0d0ecf;
+    margin-right: 20px;
 
 }
 /* Covers section */
@@ -85,9 +97,21 @@ aside.main_menu {
     background-image: url('../img/radar.jpeg');
     background-size: contain;
 }
-
-#created_for.item_img:nth-child(1) {
+#created_for.item_img:nth-child(2) {
     background-image: url('../img/mixdaily.jpeg');
+    background-size: contain;
+}
+
+/* Popular section */
+#popular .item{max-width: calc(100% / 6);}
+#popular .item_img {border-radius: 50%;}
+#popular .item_img:nth-child(1) {
+    background-image: url('../img/einaudi.jpeg');
+    background-size: contain;
+}
+
+#popular .item_img:nth-child(2) {
+    background-image: url('../img/youg.jpeg');
     background-size: contain;
 }
 
