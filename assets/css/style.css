@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-#recently_played{justify-content: space-around;}
+#recently_played, #created_for {justify-content: space-around;}
 
 #site_content{height: calc(100% - 60px);}
 aside.main_menu {
@@ -26,12 +26,10 @@ aside.main_menu {
 }
 
 .covers_section {
-    background-color: aquamarine;
     padding: 20px;;
     overflow-y: auto;
     overflow-x: hidden;
     padding-top: 60px;
-    /* margin-top: 60px; */
     width: calc(100% - 300px);
 }
 .subscribe_banner {
@@ -50,6 +48,8 @@ aside.main_menu {
     height: 236px;
     background-color: red;
 }
+
+#recently_played .item{max-width: calc(100% / 6);}
 #recently_played .item_img:nth-child(1) {
     background-image: url('../img/metal_lifting.jpg');
     background-size: contain;
@@ -77,6 +77,20 @@ aside.main_menu {
     background-image: url('../img/sinister.jpeg');
     background-size: contain;
 }
+
+/* Created for section */
+.wi100{width: calc((99%/6)*2);}
+.offwi100{margin-right: calc((99%/6)*4);}
+#created_for .item_img:nth-child(1) {
+    background-image: url('../img/radar.jpeg');
+    background-size: contain;
+}
+
+#created_for.item_img:nth-child(1) {
+    background-image: url('../img/mixdaily.jpeg');
+    background-size: contain;
+}
+
 
 /* Footer */
 footer#site_footer {
