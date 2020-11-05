@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Utility classes */
+.d-flex {display: flex;}
+.flex-wrap {flex-wrap: wrap;}
+.text_center{text-align: center;}
+body {
+    background-color: #333;
+    color: white;
+}
+.wrapper {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#recently_played{justify-content: space-around;}
+
+#site_content{height: calc(100% - 60px);}
+aside.main_menu {
+    min-width: 300px;
+    background-color: black;
+}
+
+.covers_section {
+    background-color: aquamarine;
+    padding: 20px;;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 60px;
+    /* margin-top: 60px; */
+    width: calc(100% - 300px);
+}
+.subscribe_banner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 322px);
+    height: 60px;
+    background-color: #8a2be2a1;
+    margin-right: 22px;
+
+}
+/* Covers section */
+.item_img {
+    width: 236px;
+    height: 236px;
+    background-color: red;
+}
+#recently_played .item_img:nth-child(1) {
+    background-image: url('../img/metal_lifting.jpg');
+    background-size: contain;
+}
+#recently_played .item_img:nth-child(2) {
+    background-image: url('../img/stranger.png');
+    background-size: contain;
+}
+#recently_played .item_img:nth-child(3) {
+    background-image: url('../img/aquietplace.jpeg');
+    background-size: contain;
+}
+
+#recently_played .item_img:nth-child(4) {
+    background-image: url('../img/split.jpeg');
+    background-size: contain;
+}
+
+#recently_played .item_img:nth-child(5) {
+    background-image: url('../img/cure.jpeg');
+    background-size: contain;
+}
+
+#recently_played .item_img:nth-child(6) {
+    background-image: url('../img/sinister.jpeg');
+    background-size: contain;
+}
+
+/* Footer */
+footer#site_footer {
+    background-color: yellowgreen;
+    height: 60px;
+    /* position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; */
+}
