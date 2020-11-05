@@ -8,7 +8,7 @@ a{
     color:white
 }
 .bnt_upgrade{text-align: end;}
-.bnt_upgrade>span {
+.bnt_upgrade>a {
     border: 1px solid white;
     border-radius: 30px;
     padding: 15px 30px 15px 30px;
@@ -59,6 +59,7 @@ aside.main_menu {
     width: 236px;
     height: 236px;
     background-color: red;
+    position: relative;
 }
 
 #recently_played .item{max-width: calc(100% / 6);}
@@ -115,6 +116,27 @@ aside.main_menu {
     background-size: contain;
 }
 
+.fa-play-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 4px 4px 8px #000000;
+    font-size: 50px;
+    display: none;
+}
+
+.layover {    
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.circle_radius{border-radius: 50%;}
+.item_img:hover .fa-play-circle{display: block;}
+.item_img:hover .layover{
+    background-color: rgba(0, 0, 0, 0.4);}
 
 /* Footer */
 footer#site_footer {
