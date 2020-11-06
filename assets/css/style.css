@@ -19,6 +19,7 @@ a{
 .d-flex {display: flex;}
 .flex-wrap {flex-wrap: wrap;}
 .text_center{text-align: center;}
+.line_h_center{vertical-align: top;}
 body {
     background-color: #333;
     color: white;
@@ -35,6 +36,17 @@ body {
 aside.main_menu {
     min-width: 300px;
     background-color: black;
+}
+img.svg_aside {
+    width: 32px;
+    height: 32px;
+}
+.main_menu>div>ul>li, .main_menu>div.logo_playlist>span, .main_menu>ul>li{
+    padding: 0 10px;
+    line-height: 2em;
+}
+span.favourites, span.add_playlist{
+  font-size: 30px;
 }
 
 .covers_section {
