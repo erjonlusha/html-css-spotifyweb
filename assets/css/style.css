@@ -5,7 +5,7 @@
 }
 a{
     text-decoration: none;
-    color:white
+    color:white;
 }
 .bnt_upgrade{text-align: end;}
 .bnt_upgrade>a {
@@ -20,6 +20,12 @@ a{
 .flex-wrap {flex-wrap: wrap;}
 .text_center{text-align: center;}
 .line_h_center{vertical-align: top;}
+.text_uppercase{text-transform: uppercase;}
+#site_footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
 body {
     background-color: #333;
     color: white;
@@ -29,9 +35,9 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-.text_uppercase{text-transform: uppercase;}
-#recently_played, #created_for, #popular {justify-content: space-around;}
 
+
+aside>.logo{width: 200px;}
 #site_content{height: calc(100% - 60px);}
 aside.main_menu {
     min-width: 300px;
@@ -41,8 +47,8 @@ img.svg_aside {
     width: 32px;
     height: 32px;
 }
-.main_menu>div>ul>li, .main_menu>div.logo_playlist>span, .main_menu>ul>li{
-    padding: 0 10px;
+.main_menu>div>ul>li, .main_menu>div.logo_playlist>span, .main_menu>ul>li, .logo{
+    padding: 0 20px;
     line-height: 2em;
 }
 span.favourites, span.add_playlist{
@@ -51,10 +57,13 @@ span.favourites, span.add_playlist{
 
 .covers_section {
     padding: 20px;;
-    overflow-y: auto;
-    overflow-x: hidden;
     padding-top: 60px;
     width: calc(100% - 300px);
+}
+.playlist>ul{height: 55vh;}
+.covers_section, .playlist>ul{
+        overflow-y: auto;
+        overflow-x: hidden;
 }
 .subscribe_banner {
     position: fixed;
@@ -67,66 +76,17 @@ span.favourites, span.add_playlist{
 
 }
 /* Covers section */
-.item_img {
-    width: 236px;
-    height: 236px;
-    background-color: red;
-    position: relative;
-}
 
-#recently_played .item{max-width: calc(100% / 6);}
-#recently_played .item_img:nth-child(1) {
-    background-image: url('../img/metal_lifting.jpg');
-    background-size: contain;
+.test_item{ 
+    width: calc(100% / 6);
+    height: 100%;
+    padding: 10px;
+    
 }
-#recently_played .item_img:nth-child(2) {
-    background-image: url('../img/stranger.png');
-    background-size: contain;
-}
-#recently_played .item_img:nth-child(3) {
-    background-image: url('../img/aquietplace.jpeg');
-    background-size: contain;
-}
+.test_item>img{
+    width: 100%;}
 
-#recently_played .item_img:nth-child(4) {
-    background-image: url('../img/split.jpeg');
-    background-size: contain;
-}
-
-#recently_played .item_img:nth-child(5) {
-    background-image: url('../img/cure.jpeg');
-    background-size: contain;
-}
-
-#recently_played .item_img:nth-child(6) {
-    background-image: url('../img/sinister.jpeg');
-    background-size: contain;
-}
-
-/* Created for section */
-.wi100{width: calc((99%/6)*2);}
-.offwi100{margin-right: calc((99%/6)*4);}
-#created_for .item_img:nth-child(1) {
-    background-image: url('../img/radar.jpeg');
-    background-size: contain;
-}
-#created_for.item_img:nth-child(2) {
-    background-image: url('../img/mixdaily.jpeg');
-    background-size: contain;
-}
-
-/* Popular section */
-#popular .item{max-width: calc(100% / 6);}
-#popular .item_img {border-radius: 50%;}
-#popular .item_img:nth-child(1) {
-    background-image: url('../img/einaudi.jpeg');
-    background-size: contain;
-}
-
-#popular .item_img:nth-child(2) {
-    background-image: url('../img/youg.jpeg');
-    background-size: contain;
-}
+.item{position: relative;}
 
 .fa-play-circle {
     position: absolute;
@@ -137,25 +97,34 @@ span.favourites, span.add_playlist{
     text-shadow: 4px 4px 8px #000000;
     font-size: 50px;
     display: none;
+} 
+.circle_radius{border-radius: 50%;}
+.test_item:hover .fa-play-circle {
+    display: block;
 }
+.item:hover .layover {
+    background-color: rgba(0, 0, 0, 0.4);
+}  
 
 .layover {    
     height: 100%;
     width: 100%;
     position: absolute;
-}
+} 
 
-.circle_radius{border-radius: 50%;}
-.item_img:hover .fa-play-circle{display: block;}
-.item_img:hover .layover{
-    background-color: rgba(0, 0, 0, 0.4);}
+/* Created for.. section */
+    
+
+.install-bottom{
+    padding: ;
+    width: 100%;
+}
 
 /* Footer */
 footer#site_footer {
     background-color: yellowgreen;
     height: 60px;
-    /* position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%; */
+    width: 100%;
 }
+
+.z3{z-index: 3;}
