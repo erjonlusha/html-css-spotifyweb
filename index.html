@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,600&display=swap" rel="stylesheet">
   <title>Spotify clone</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link rel="stylesheet" href="assets/css/style.css">
@@ -12,26 +13,26 @@
 <body>
   <div class="wrapper  d-flex">
     <main id="site_content" class="d-flex">
-      <aside class="main_menu">
+      <aside class="main_menu cr_gray ptb_20">
         <div class="logo">
           <img src="assets/img/logo.svg" alt="">
         </div>
-        <ul>
+        <ul class=" ptb_20">
           <li>
             <img class="svg_aside" src="assets/img/home.svg" alt="">
-            <span class="line_h_center">Home</span>
+            <span class="line_h_center"><a href="#">Home</a></span>
           </li>
           <li>
             <img class="svg_aside" src="assets/img/search.svg" alt="">
-            <span class="line_h_center">Cerca</span>
+            <span class="line_h_center"><a href="">Cerca</a></span>
           </li>
           <li>
             <img src="assets/img/libreria.svg" alt="" class="svg_aside">
-            <span class="line_h_center">La tua libreria</span>
+            <span class="line_h_center"><a href="#"> La tua libreria</a></span>
           </li>
         </ul>
         <div class="logo_playlist">
-          <span class="text_uppercase">Playlist</span>
+          <span class="text_uppercase"><a href="#">Playlist</a></span>
           <ul>
             <li>
               <span class="add_playlist"><i class="fas fa-plus-square"></i></span>
@@ -73,16 +74,23 @@
             </li>
           </ul>
         </div>
-        <div class="install-bottom ">
-          <span>Install</span>
+        <div class="install-bottom">
+          <div class="aside_icon">
+            <img src="assets/img/download.svg" alt="">
+            <strong>Install</strong>
+          </div>
+          <div class="aside_icon cr_white">
+            <img src="assets/img/profile.svg" alt="">
+            <strong>John Doe</strong>
+          </div>
         </div>
       </aside>
       <div class="covers_section">
         <div class="subscribe_banner">
-          <div class="bnt_upgrade text_uppercase"><a href="#">Effettua upgrade</a></div>
+          <div class="bnt_upgrade text_uppercase mr_5"><a href="#">Effettua upgrade</a></div>
         </div>
 
-        <nav class="text_center text_uppercase">
+        <nav class="text_center text_uppercase ptb_20">
           <a href="#">In evidenza </a>
           <a href="#">Podcast</a>
           <a href="#">Classifiche</a>
@@ -93,8 +101,8 @@
 
         <section>
           <h2>Recently played</h2>
-          <div class="d-flex flex-wrap text_center">
-            <div class="test_item item">
+          <div class="d-flex flex-wrap text_center ptb_20">
+            <div class="test_item item ">
               <div class="layover"><i class="far fa-play-circle"></i></div>
               <img src="assets/img/metal_lifting.jpg" alt="">
               <h3>Heavy Metal</h3>
@@ -136,18 +144,16 @@
         <section>
           <h2>Creato per John Doe</h2>
           <p>Più ascolti, più accurati saranno i suggerimenti.</p>
-          <div class="d-flex flex-wrap text_uppercase">
+          <div class="d-flex flex-wrap ptb_20">
             <div class="test_item item">
               <div class="layover"><i class="far fa-play-circle"></i></div>
-              <img src="assets/img/metal_lifting.jpg" alt="">
-              <h3>Lorem</h3>
-              <p>Lorem, ipsum dolor.</p>
+              <img src="assets/img/radar.jpeg" alt="">
+              <h3>Release Radar</h3>
             </div>
             <div class="test_item item">
               <div class="layover"><i class="far fa-play-circle"></i></div>
-              <img src="assets/img/stranger.png" alt="">
-              <h3>Lorem</h3>
-              <p>Lorem, ipsum dolor.</p>
+              <img src="assets/img/mixdaily.jpeg" alt="">
+              <h3>Daily Mix 1</h3>
             </div>
           </div>
 
@@ -156,18 +162,20 @@
         <section>
           <h2>Artisti più popolari</h2>
           <p>Più ascolti, più accurati saranno i suggerimenti.</p>
-          <div class="d-flex flex-wrap text_center">
+          <div class="d-flex flex-wrap text_center ptb_20">
             <div class="test_item item ">
-              <div class="layover"><i class="far fa-play-circle"></i></div>
-              <img src="assets/img/metal_lifting.jpg" alt="">
-              <h3>Lorem</h3>
-              <p>Lorem, ipsum dolor.</p>
+              <div class="layover bd_radius"><i class="far fa-play-circle"></i></div>
+              <img class="bd_radius" src="assets/img/youg.jpeg" alt="">
+              <h3>Youg</h3>
+              <p>Subtitle</p>
             </div>
             <div class="test_item item">
-              <div class="layover"><i class="far fa-play-circle"></i></div>
-              <img src="assets/img/stranger.png" alt="">
-              <h3>Lorem</h3>
-              <p>Lorem, ipsum dolor.</p>
+              <div class="layover bd_radius">
+                <i class="far fa-play-circle"></i>
+              </div>
+                <img class="bd_radius" src="assets/img/einaudi.jpeg" alt="">
+              <h3>Einaudi</h3>
+              <p>Subtitle</p>
             </div>
           </div>
 
