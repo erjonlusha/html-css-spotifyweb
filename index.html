@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,600&display=swap" rel="stylesheet">
   <title>Spotify clone</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
@@ -20,37 +21,28 @@
         <ul class=" ptb_20">
           <li>
             <img class="svg_aside" src="assets/img/home.svg" alt="">
-            <span class="line_h_center"><a href="#">Home</a></span>
+            <span class="vertical_line_center"><a href="#">Home</a></span>
           </li>
           <li>
             <img class="svg_aside" src="assets/img/search.svg" alt="">
-            <span class="line_h_center"><a href="">Cerca</a></span>
+            <span class="vertical_line_center"><a href="">Cerca</a></span>
           </li>
           <li>
             <img src="assets/img/libreria.svg" alt="" class="svg_aside">
-            <span class="line_h_center"><a href="#"> La tua libreria</a></span>
+            <span class="vertical_line_center"><a href="#"> La tua libreria</a></span>
           </li>
         </ul>
         <div class="logo_playlist">
-          <span class="text_uppercase"><a href="#">Playlist</a></span>
+          <span class="text_uppercase mb_10"><a href="#">Playlist</a></span>
           <ul>
             <li>
               <span class="add_playlist"><i class="fas fa-plus-square"></i></span>
-              <span class="line_h_center">Crea playlist</span>
+              <span class="vertical_line_center">Crea playlist</span>
             </li>
           </ul>
         </div>
-        <div class="playlist">
+        <div class="playlist ">
           <ul>
-            <li>
-              <a href="#">Nome Playlist</a>
-            </li>
-            <li>
-              <a href="#">Nome Playlist</a>
-            </li>
-            <li>
-              <a href="#">Nome Playlist</a>
-            </li>
             <li>
               <a href="#">Nome Playlist</a>
             </li>
@@ -102,41 +94,70 @@
         <section>
           <h2>Recently played</h2>
           <div class="d-flex flex-wrap text_center ptb_20">
-            <div class="test_item item ">
-              <div class="layover"><i class="far fa-play-circle"></i></div>
-              <img src="assets/img/metal_lifting.jpg" alt="">
-              <h3>Heavy Metal</h3>
+            <div class="cover item">
+              <div class="cover_wrapper">
+                <div class="layover"><i class="far fa-play-circle"></i></div>
+                <img src="assets/img/metal_lifting.jpg" alt="">
+              </div>
+              <div class="cover_text">
+                <h3>Heavy Metal</h3>
               <p>Subtitle</p>
+              </div>
             </div>
-            <div class="test_item item">
-              <div class="layover"><i class="far fa-play-circle"></i></div>
-              <img src="assets/img/stranger.png" alt="">
-              <h3>Stanger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
-              <p>Kyle Dixon & Michael Stein</p>
+
+            <div class="cover item">
+              <div class="cover_wrapper">
+                <div class="layover"><i class="far fa-play-circle"></i></div>
+                <img src="assets/img/stranger.png" alt="">
+              </div>
+              <div class="cover_text">
+                <h3>Stanger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
+                <p>Kyle Dixon & Michael Stein</p>
+              </div>
             </div>
-            <div class="test_item item">
-              <div class="layover"><i class="far fa-play-circle"></i></div>
-              <img src="assets/img/aquietplace.jpeg" alt="">
-              <h3>A quiet place</h3>
-              <p>Subtitle</p>
+
+            <div class="cover item">
+              <div class="cover_wrapper">
+                 <div class="layover"><i class="far fa-play-circle"></i></div>
+                <img src="assets/img/aquietplace.jpeg" alt="">
+              </div>
+              <div class="cover_text">
+                <h3>A quiet place</h3>
+                <p>Subtitle</p>
+              </div>
             </div>
-            <div class="test_item item">
-              <div class="layover"><i class="far fa-play-circle"></i></div>
-              <img src="assets/img/split.jpeg" alt="">
-              <h3>Split</h3>
-              <p>Subtitle</p>
+
+            <div class="cover item">
+              <div class="cover_wrapper">
+                <div class="layover"><i class="far fa-play-circle"></i></div>
+                <img src="assets/img/split.jpeg" alt="">
+              </div>
+              <div class="cover_text">
+                <h3>Split</h3>
+                <p>Subtitle</p>
+              </div>
             </div>
-            <div class="test_item item">
-              <div class="layover"><i class="far fa-play-circle"></i></div>
-              <img src="assets/img/cure.jpeg" alt="">
-              <h3>A cure for wellness</h3>
-              <p>Subtitle</p>
+
+            <div class="cover item">
+              <div class="cover_wrapper">
+                <div class="layover"><i class="far fa-play-circle"></i></div>
+                <img src="assets/img/cure.jpeg" alt="">
+              </div>
+              <div class="cover_text">
+                <h3>A cure for wellness</h3>
+                <p>Subtitle</p>
+              </div>
             </div>
-            <div class="test_item item">
-              <div class="layover"><i class="far fa-play-circle"></i></div>
-              <img src="assets/img/sinister.jpeg" alt="">
-              <h3>Sinister</h3>
-              <p>Subtitle</p>
+            
+            <div class="cover item">
+              <div class="cover_wrapper">
+                <div class="layover"><i class="far fa-play-circle"></i></div>
+                <img src="assets/img/sinister.jpeg" alt="">
+              </div>
+              <div class="cover_text">                
+                <h3>Sinister</h3>
+                <p>Subtitle</p>
+              </div>
             </div>
           </div>
         </section>
@@ -145,15 +166,24 @@
           <h2>Creato per John Doe</h2>
           <p>Più ascolti, più accurati saranno i suggerimenti.</p>
           <div class="d-flex flex-wrap ptb_20">
-            <div class="test_item item">
-              <div class="layover"><i class="far fa-play-circle"></i></div>
-              <img src="assets/img/radar.jpeg" alt="">
-              <h3>Release Radar</h3>
+            <div class="cover item">
+              <div class="cover_wrapper">
+                <div class="layover"><i class="far fa-play-circle"></i></div>
+                <img src="assets/img/radar.jpeg" alt="">
+              </div>
+              <div class="cover_text">              
+                <h3>Release Radar</h3>
+              </div>
             </div>
-            <div class="test_item item">
-              <div class="layover"><i class="far fa-play-circle"></i></div>
-              <img src="assets/img/mixdaily.jpeg" alt="">
-              <h3>Daily Mix 1</h3>
+
+            <div class="cover item">
+              <div class="cover_wrapper">              
+                <div class="layover"><i class="far fa-play-circle"></i></div>
+                <img src="assets/img/mixdaily.jpeg" alt="">
+              </div>
+              <div class="cover_text">                
+                <h3>Daily Mix 1</h3>
+              </div>
             </div>
           </div>
 
@@ -163,28 +193,91 @@
           <h2>Artisti più popolari</h2>
           <p>Più ascolti, più accurati saranno i suggerimenti.</p>
           <div class="d-flex flex-wrap text_center ptb_20">
-            <div class="test_item item ">
-              <div class="layover bd_radius"><i class="far fa-play-circle"></i></div>
-              <img class="bd_radius" src="assets/img/youg.jpeg" alt="">
-              <h3>Youg</h3>
-              <p>Subtitle</p>
-            </div>
-            <div class="test_item item">
-              <div class="layover bd_radius">
-                <i class="far fa-play-circle"></i>
+            <div class="cover item">
+              <div class="cover_wrapper">                
+                <div class="layover bd_radius"><i class="far fa-play-circle"></i></div>
+                <img class="bd_radius" src="assets/img/youg.jpeg" alt="">
               </div>
+              <div class="cover_text">                
+                <h3>Youg</h3>
+                <p>Subtitle</p>
+              </div>
+            </div>
+
+            <div class="cover item">
+              <div class="cover_wrapper">                
+                <div class="layover bd_radius"><i class="far fa-play-circle"></i></div>
                 <img class="bd_radius" src="assets/img/einaudi.jpeg" alt="">
-              <h3>Einaudi</h3>
-              <p>Subtitle</p>
+              </div>
+              <div class="cover_text">                
+                <h3>Einaudi</h3>
+                <p>Subtitle</p>
+              </div>
             </div>
           </div>
-
         </section>
 
       </div>
     </main>
     <footer id="site_footer">
-      <div class="player">player</div>
+      <div class="player-footer d-flex flex-wrap pt_10">
+        <div class="song display_inline">
+            <img class="song_logo" src="assets/img/sinister.jpeg" alt="">
+            <div class="song_desc display_inline mlr_10 mt_10">
+                <div class="song_title">Sinister</div>
+                <p class="song_artist">Brano Nome</p>
+            </div>
+            <i class="ml_20 far fa-heart"></i>
+            <span class="ml_10 vertical_line_mid">
+              <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor" fill-rule="evenodd"><path d="M1 3v9h14V3H1zm0-1h14a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" fill-rule="nonzero"></path><path d="M10 8h4v3h-4z"></path></g></svg>
+            </span>
+        </div>  
+            
+        <div class="player display_inline">
+          <div class="text_center">
+              <div class="player_controls mb_10">
+                <i class="fas fa-random"></i>
+                <i class="fas fa-step-backward"></i>
+                <button onclick="move()"><i class="fas fa-play"></i></button> 
+                <i class="fas fa-step-forward"></i>
+                <i class="fas fa-redo"></i>
+              </div>
+              <div class="player_bar">
+                  <div id="myProgress">
+                      <div id="myBar"></div>
+                  </div>
+                  <br>
+                  <script>
+                      var i = 0;
+                      function move() {
+                      if (i == 0) {
+                          i = 1;
+                          var elem = document.getElementById("myBar");
+                          var width = 1;
+                          var id = setInterval(frame, 1000);
+                          function frame() {
+                          if (width >= 100) {
+                              clearInterval(id);
+                              i = 0;
+                          } else {
+                              width++;
+                              elem.style.width = width + "%";
+                          }
+                          }
+                      }
+                      }
+                  </script>
+              </div>
+          </div>
+        </div>
+
+        <div class="player_more display_inline clear">
+          <i class="fas fa-desktop"></i>
+          <i class="fas fa-volume-up"></i>
+          <span class="volume"></span>
+        </div>
+      </div>
+    </div>
     </footer>
   </div>
 

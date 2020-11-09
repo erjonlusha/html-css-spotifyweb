@@ -17,10 +17,12 @@ a{text-decoration: none;
 }
 
 /* Utility classes */
+
 .d-flex {display: flex;}
 .flex-wrap {flex-wrap: wrap;}
 .text_center{text-align: center;}
-.line_h_center{vertical-align: top;}
+.vertical_line_center{vertical-align: top;}
+.vertical_line_mid{vertical-align: middle;}
 .text_uppercase{text-transform: uppercase;}
 .cr_gray, ul>li>a, p{
     font-size: small;
@@ -29,30 +31,32 @@ a{text-decoration: none;
 p{line-height: 2rem;}
 .cr_white{color:white}
 /* Margin & Padding classes */
-.ml_5{margin-left: 10px;}
+.ml_5{margin-left: 5px;}
+.mt_5{margin-top: 5px;}
 .mr_5{margin-right: 10px;}
+.ml_10{margin-left: 10px;}
 .mtb_10{margin: 10px 0;}
 .m_10{margin: 10px;}
+.ml_20{margin-left: 20px;}
+
 .mlr_10{margin: 0 10px;}
 .mt_10{margin-top: 10px;}
 .mb_10{margin-bottom: 10px;}
 .p_8{padding: 8px;}
 
-.pt_10{padding-top: 10px;}
+.pt_10{padding: 20px 20px;}
 
 .plr_20{padding: 20px;}
 .ptb_20 {padding: 20px 0;}
 .pb_20 {padding-bottom: 20px;}
-.pt_10 {padding-top: 20px;}
+.pl_20 {padding-left: 20px;}
+.pt_20 {padding-top: 20px;}
 
 .ptb_40{padding: 40px 0;}
 .pb_40{padding: 0 0 40px 0;}
 .plr_40{padding: 0 40px;}
 .pr_40 {padding: 0 40px 0 0;}
 
-.ptb_80{padding: 80px 0;}
-.pb_80 {padding: 0 0 80px 0;}
-.pr_80 {padding: 0 80px 0 0;}
 /* /Margin & Padding classes */
 /* /Utility classes */
 #site_footer{
@@ -61,7 +65,7 @@ p{line-height: 2rem;}
     left: 0;
 }
 body {
-    background-color: #333;
+    background-color: #141922;
     color: white;
 }
 .wrapper {
@@ -72,7 +76,7 @@ body {
 
 
 aside>.logo{width: 200px;}
-#site_content{height: calc(100% - 60px);}
+#site_content{max-height: calc(100% - 100px);}
 aside.main_menu {
     min-width: 300px;
     background-color: black;
@@ -94,7 +98,10 @@ span.favourites, span.add_playlist{
     padding-top: 60px;
     width: calc(100% - 300px);
 }
-.playlist>ul{height: 44vh;}
+.playlist>ul>li>a {line-height: 3.5rem;}
+.playlist>ul{
+    height: 40vh;
+}
 .covers_section, .playlist>ul{
         overflow-y: auto;
         overflow-x: hidden;
@@ -111,32 +118,33 @@ span.favourites, span.add_playlist{
 }
 /* Covers section */
 
-.test_item{ 
+.item{ 
     width: calc(100% / 6);
     height: 100%;
     padding: 10px;
     
 }
-.test_item>img{
+.cover_wrapper>img {
     width: 100%;}
 
-.item{position: relative;}
+.cover_wrapper{position: relative;}
 
 .fa-play-circle {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+        /* transform: translate(-65%, -158%); */
     color: white;
     text-shadow: 4px 4px 8px #000000;
     font-size: 50px;
     display: none;
 } 
 .circle_radius{border-radius: 50%;}
-.test_item:hover .fa-play-circle {
+.item:hover .fa-play-circle {
     display: block;
 }
-.item:hover .layover {
+.cover_wrapper:hover .layover {
     background-color: rgba(0, 0, 0, 0.4);
 }  
 
@@ -150,6 +158,9 @@ span.favourites, span.add_playlist{
     
 
 .install-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
     padding: 20px;
     width: 100%;
 }
@@ -183,11 +194,65 @@ nav>a{
 
 /* Footer */
 footer#site_footer {
-    background-color: yellowgreen;
-    height: 60px;
+    background-color: #282828;
+    height: 100px;
     width: 100%;
 }
 
+.song_logo {
+    height: 50px;
+    width: 50px;
+}
+.display_inline{display: inline-block;}
+.song_desc{line-height: 100%;}
+.fa-heart{ font-size: medium;}
+#myProgress {
+    width: 700px;
+    background-color: #535353;
+    border-radius: 20px;
+}
 
+#myBar {
+    width: 1%;
+    height: 5px;
+    background-color: #b3b3b3;
+    border-radius: 20px;
+}
+.player_controls>i:hover,
+.player_controls>button:hover,
+.song>i:hover,
+.song>span svg:hover,
+.song_logo:hover {
+    transform: scale(1.5);
+}
+#myProgress:hover #myBar{box-shadow:;}
+button{
+    appearance: none;
+    box-shadow: none;
+    color: white;
+    border: none;
+    background: none;
+}
 
-
+.player-footer{justify-content: space-between;}
+.player_controls>*{
+    padding: 0 10px;
+}
+.fa-play{
+    border: 3px solid white;
+    border-radius: 50%;
+    padding: 10px;
+}
+.clear::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.float_left{float: left;}
+.volume::after {
+    content: '';
+    float: left;
+    width: 50px;
+    height: 2px;
+    background-color: #899397;
+}
