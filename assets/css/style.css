@@ -225,7 +225,9 @@ footer#site_footer {
 .song_logo:hover {
     transform: scale(1.5);
 }
-#myProgress:hover #myBar{box-shadow:;}
+#myProgress:hover #myBar {
+    box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.27);
+}
 button{
     appearance: none;
     box-shadow: none;
@@ -248,11 +250,18 @@ button{
     display: table;
     clear: both;
 }
-.float_left{float: left;}
-.volume::after {
-    content: '';
-    float: left;
-    width: 50px;
-    height: 2px;
+/* .float_left{float: left;} */
+
+.volume_line {
+    position: absolute;
+    top: 0;
+    right:0;
+    border-radius: 10px;
+    width: 65%;
+    height: 4px;
+    margin-top: 9px;
     background-color: #899397;
+
 }
+.fas_icons{padding-right: 100px;}
+.player_more{margin-top: 25px;}
