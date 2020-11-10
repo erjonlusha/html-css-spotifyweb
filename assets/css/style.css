@@ -4,11 +4,15 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-a{text-decoration: none;
-   color:white;
+body{
+    min-width: 1080px;
 }
-.bnt_upgrade{text-align: end;}
-.bnt_upgrade>a {
+a{
+    text-decoration: none;
+    color:white;
+}
+.btn_upgrade{text-align: end;}
+.btn_upgrade>a {
     font-weight: 600;
     border: 1px solid white;
     border-radius: 30px;
@@ -31,32 +35,16 @@ a{text-decoration: none;
 p{line-height: 2rem;}
 .cr_white{color:white}
 /* Margin & Padding classes */
-.ml_5{margin-left: 5px;}
-.mt_5{margin-top: 5px;}
 .mr_5{margin-right: 10px;}
 .ml_10{margin-left: 10px;}
-.mtb_10{margin: 10px 0;}
-.m_10{margin: 10px;}
 .ml_20{margin-left: 20px;}
-
+.mlr_20{margin: 0 20px;}
 .mlr_10{margin: 0 10px;}
 .mt_10{margin-top: 10px;}
 .mb_10{margin-bottom: 10px;}
-.p_8{padding: 8px;}
 
-.pt_10{padding: 20px 20px;}
-
-.plr_20{padding: 20px;}
+.p_20{padding: 20px 20px;}
 .ptb_20 {padding: 20px 0;}
-.pb_20 {padding-bottom: 20px;}
-.pl_20 {padding-left: 20px;}
-.pt_20 {padding-top: 20px;}
-
-.ptb_40{padding: 40px 0;}
-.pb_40{padding: 0 0 40px 0;}
-.plr_40{padding: 0 40px;}
-.pr_40 {padding: 0 40px 0 0;}
-
 /* /Margin & Padding classes */
 /* /Utility classes */
 #site_footer{
@@ -74,7 +62,7 @@ body {
     justify-content: space-between;
 }
 
-
+aside{position: relative;}
 aside>.logo{width: 200px;}
 #site_content{max-height: calc(100% - 100px);}
 aside.main_menu {
@@ -94,14 +82,12 @@ span.favourites, span.add_playlist{
 }
 
 .covers_section {
-    padding: 20px;;
+    padding: 20px;
     padding-top: 60px;
     width: calc(100% - 300px);
 }
-.playlist>ul>li>a {line-height: 3.5rem;}
-.playlist>ul{
-    height: 40vh;
-}
+.playlist>ul>li>a {line-height: 3rem;}
+.playlist>ul{height: 40vh;}
 .covers_section, .playlist>ul{
         overflow-y: auto;
         overflow-x: hidden;
@@ -110,10 +96,10 @@ span.favourites, span.add_playlist{
     position: fixed;
     top: 0;
     right: 0;
-    width: calc(100% - 320px);
+    width: calc(100% - 310px);
     height: 60px;
     background-color: #0e0d0ecf;
-    margin-right: 20px;
+    margin-right: 10px;
 
 }
 /* Covers section */
@@ -134,7 +120,6 @@ span.favourites, span.add_playlist{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-        /* transform: translate(-65%, -158%); */
     color: white;
     text-shadow: 4px 4px 8px #000000;
     font-size: 50px;
@@ -149,13 +134,10 @@ span.favourites, span.add_playlist{
 }  
 
 .layover {    
-    height: 100%;
+    height: 99%;
     width: 100%;
     position: absolute;
-} 
-
-/* Created for.. section */
-    
+}  
 
 .install-bottom{
     position: absolute;
@@ -184,6 +166,7 @@ span.favourites, span.add_playlist{
     vertical-align: middle;
     margin: 5px;
 }
+
 .bd_radius{border-radius: 50%;}
 
 nav>a{
@@ -204,10 +187,9 @@ footer#site_footer {
     width: 50px;
 }
 .display_inline{display: inline-block;}
-.song_desc{line-height: 100%;}
 .fa-heart{ font-size: medium;}
 #myProgress {
-    width: 700px;
+    width: 590px;
     background-color: #535353;
     border-radius: 20px;
 }
@@ -222,7 +204,9 @@ footer#site_footer {
 .player_controls>button:hover,
 .song>i:hover,
 .song>span svg:hover,
-.song_logo:hover {
+.song_logo:hover,
+.fas_icons>i:hover,
+#site_content>div>div>div>a:hover {
     transform: scale(1.5);
 }
 #myProgress:hover #myBar {
@@ -250,18 +234,42 @@ button{
     display: table;
     clear: both;
 }
-/* .float_left{float: left;} */
 
 .volume_line {
     position: absolute;
     top: 0;
     right:0;
     border-radius: 10px;
-    width: 65%;
+    width: 50%;
     height: 4px;
     margin-top: 9px;
     background-color: #899397;
 
 }
+.volume_line:hover{
+    margin-top: 8px;
+    transform: scaleY(1.2);
+}
 .fas_icons{padding-right: 100px;}
 .player_more{margin-top: 25px;}
+
+@media screen and (min-width: 768px) and (max-width: 1079px) {
+    body {min-width: 768px;}
+    #site_content{max-height: calc(100% - 54px);}
+    .item {width: calc(100% / 4);}
+    #myProgress {width: 490px;}
+    aside.main_menu {min-width: 150px;}
+    .covers_section {width: calc(100% - 150px);}
+    .subscribe_banner {width: calc(100% - 200px);}
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+    body {background-color: blue;}
+    #site_content{max-height: 100%;}
+    .item {width: calc(100% / 2);}
+    #myProgress {width: 390px;}
+}
+@media screen and (max-width: 425px) {
+    body {
+        background-color: red;
+    }
+}
