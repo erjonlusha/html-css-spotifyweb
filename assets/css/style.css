@@ -255,18 +255,69 @@ button{
 
 @media screen and (min-width: 768px) and (max-width: 1079px) {
     body {min-width: 768px;}
-    #site_content{max-height: calc(100% - 54px);}
+    #site_content{max-height: calc(100% - 80px);}
     .item {width: calc(100% / 4);}
-    #myProgress {width: 490px;}
+    #myProgress {width: 250px;}
     aside.main_menu {min-width: 150px;}
     .covers_section {width: calc(100% - 150px);}
     .subscribe_banner {width: calc(100% - 200px);}
+    h2{font-size: 19px;}
+    h3{font-size: 16px;}
+    footer#site_footer {height: 100px;}
+    .player-footer{justify-content: space-between;}
 }
 @media screen and (min-width: 425px) and (max-width: 767px) {
-    body {background-color: blue;}
-    #site_content{max-height: 100%;}
+    body {min-width: 425px;}
+    #site_content{max-height: calc(100% - 80px);}
     .item {width: calc(100% / 2);}
-    #myProgress {width: 390px;}
+    #myProgress {width: 150px;}
+    aside.main_menu {min-width: 150px;}
+    .covers_section {width: calc(100% - 150px);}
+    .subscribe_banner {width: calc(100% - 200px);}
+    h2{font-size: 16px;}
+    h3{font-size: 13px;}
+    footer#site_footer {height: 100px;}
+    .player-footer{justify-content: space-between;}
+    nav>a {
+        padding: 5px;
+        font: weight 600;
+        font-size: 9px;
+    }
+    .song_desc>.song_title{font-size: 13px;}
+    .song_desc>.song_artist{font-size: 9px;}
+    .sm_mlr_10{margin: 0 5px;} 
+    .sm_mt_10{margin-top: 5px;}
+    .player_controls>* {padding: 0 3px;}
+    .sm_ml_20{margin-left: 10px;} 
+    .sm_mlr_20 {margin: 0 10px;}
+    .sm_ml_5{margin-left: 5px;}
+    .sm_mr_5{margin-right: 5px;}
+    .sm_ml_0{margin: 0;}
+    .volume_line {
+        width: 30%;
+        height: 4px;
+    }
+    .fas_icons{padding-right: 30px;}
+    .song_logo{
+        width: 30px;
+        height: 30px;
+    }
+    .sm_p_20{padding: 10px;}
+    .song{position: relative;}
+    .fa-heart{
+        position: absolute;
+        top: 20%;
+    }
+    span>svg{
+        position: absolute;
+        bottom: 30%;
+    }
+    .btn_upgrade>a {
+        font-size: 13px;
+        border-radius: 30px;
+        padding: 10px 30px 10px 30px;
+        line-height: 4em;
+    }
 }
 @media screen and (max-width: 425px) {
     body {
