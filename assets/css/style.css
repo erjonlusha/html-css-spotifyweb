@@ -61,9 +61,9 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-
+.xs_aside{display: none;}
 aside{position: relative;}
-aside>.logo{width: 200px;}
+aside>.logo{max-width: 200px;}
 #site_content{max-height: calc(100% - 100px);}
 aside.main_menu {
     min-width: 300px;
@@ -258,41 +258,122 @@ button{
     #site_content{max-height: calc(100% - 80px);}
     .item {width: calc(100% / 4);}
     #myProgress {width: 250px;}
-    aside.main_menu {min-width: 150px;}
+    aside.main_menu {width: 150px;}
     .covers_section {width: calc(100% - 150px);}
-    .subscribe_banner {width: calc(100% - 200px);}
+    .subscribe_banner {width: calc(100% - 310px);}
     h2{font-size: 19px;}
     h3{font-size: 16px;}
     footer#site_footer {height: 100px;}
-    .player-footer{justify-content: space-between;}
 }
-@media screen and (min-width: 425px) and (max-width: 767px) {
-    body {min-width: 425px;}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    body {min-width: 500px;}
+/* Aside */
+    aside> * a,
+    .logo_playlist>span,
+    .playlist>ul>li>a{ font-size: 10px;}
+    aside.logo{ width: 100%;}
+/* Covers Section */
     #site_content{max-height: calc(100% - 80px);}
     .item {width: calc(100% / 2);}
     #myProgress {width: 150px;}
     aside.main_menu {min-width: 150px;}
-    .covers_section {width: calc(100% - 150px);}
-    .subscribe_banner {width: calc(100% - 200px);}
+    .covers_section {width: 100%;}
+    .subscribe_banner {width: calc(100% - 160px);}
     h2{font-size: 16px;}
     h3{font-size: 13px;}
-    footer#site_footer {height: 100px;}
-    .player-footer{justify-content: space-between;}
     nav>a {
         padding: 5px;
-        font: weight 600;
+        font-size: 9px;
+    }
+    .btn_upgrade>a {
+        font-size: 13px;
+        border-radius: 30px;
+        padding: 10px 30px 10px 30px;
+        line-height: 4em;
+    }
+    .sm_mlr_10{margin: 0 5px;} 
+    .sm_mt_10{margin-top: 5px;}
+    .sm_ml_20{margin-left: 10px;} 
+    .sm_mlr_20 {margin: 0 10px;}
+    .sm_ml_5{margin-left: 5px;}
+    .sm_mr_5{margin-right: 5px;}
+    .sm_ml_0{margin: 0;}
+    .sm_p_20{padding: 10px;}
+/* Footer */
+    .song_desc>.song_artist{font-size: 9px;}
+    .song_desc>.song_title{font-size: 13px;}
+    .song_logo{
+        width: 30px;
+        height: 30px;
+    }
+    .volume_line {
+        width: 30%;
+        height: 4px;
+    }
+    .player_controls>* {padding: 0 3px;}
+    .fas_icons{padding-right: 30px;}
+    .song{position: relative;}
+    .fa-heart{
+        position: absolute;
+        top: 20%;
+    }
+    span>svg {
+        position: absolute;
+        bottom: 30%;
+    }
+    footer#site_footer {height: 100px;}
+    .player-footer{justify-content: space-between;}
+    
+}
+
+@media screen and (max-width: 500px) {
+    body {min-width: 250px;}
+    /* Aside */
+    aside>*{display: none;}
+    .xs_aside{display: block;}
+    .xs_aside>div{margin: 5px} 
+    /* Covers Section */
+    #site_content{max-height: calc(100% - 40px);}
+    .item {width: calc(100% / 2);}
+    aside.main_menu {min-width: 40px;}
+    .covers_section {width: 100%;}
+    .subscribe_banner {width: calc(100% - 50px);}
+    h2{font-size: 16px;}
+    h3{font-size: 13px;}
+    nav>a {
+        padding: 5px;
         font-size: 9px;
     }
     .song_desc>.song_title{font-size: 13px;}
     .song_desc>.song_artist{font-size: 9px;}
     .sm_mlr_10{margin: 0 5px;} 
     .sm_mt_10{margin-top: 5px;}
-    .player_controls>* {padding: 0 3px;}
     .sm_ml_20{margin-left: 10px;} 
     .sm_mlr_20 {margin: 0 10px;}
     .sm_ml_5{margin-left: 5px;}
     .sm_mr_5{margin-right: 5px;}
     .sm_ml_0{margin: 0;}
+    
+    .sm_p_20{padding: 10px;}
+    .btn_upgrade>a {
+        font-size: 13px;
+        border-radius: 30px;
+        padding: 10px 30px 10px 30px;
+        line-height: 4em;
+    }
+    /* Footer */
+    footer#site_footer {height: 100px;}
+    #myProgress {width: 150px;}
+    .player_controls>* {padding: 0 3px;}
+    span>svg{
+        position: absolute;
+        bottom: 30%;
+    }
+    .song{position: relative;}
+    .fa-heart{
+        position: absolute;
+        top: 20%;
+    }
     .volume_line {
         width: 30%;
         height: 4px;
@@ -301,26 +382,5 @@ button{
     .song_logo{
         width: 30px;
         height: 30px;
-    }
-    .sm_p_20{padding: 10px;}
-    .song{position: relative;}
-    .fa-heart{
-        position: absolute;
-        top: 20%;
-    }
-    span>svg{
-        position: absolute;
-        bottom: 30%;
-    }
-    .btn_upgrade>a {
-        font-size: 13px;
-        border-radius: 30px;
-        padding: 10px 30px 10px 30px;
-        line-height: 4em;
-    }
-}
-@media screen and (max-width: 425px) {
-    body {
-        background-color: red;
     }
 }
